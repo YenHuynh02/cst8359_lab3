@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+    <style>
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+            .about table {
+                border: 1px solid black;
+                width: 60vw;
+            }
+
+        :is(.about, .question) td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .about col {
+            width: 25%;
+        }
+
+        .question {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+            .question table {
+                border: 1px solid black;
+                width: 90vw;
+            }
+
+            .question col {
+                width: 50%;
+            }
+
+            .question table tr td {
+                font-family: cursive;
+                font-weight: bold;
+                text-align: left;
+            }
+
+                .question table tr td p {
+                    font-weight: normal;
+                }
+    </style>
+
+</head>
+
+<body>
+    <h1>About me</h1>
+    <div class="about">
+        <table>
+            <colgroup>
+                <col>
+                <col>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <td><strong>Full name</strong></td>
+                <td><strong>Student number</strong></td>
+                <td><strong>Student email</strong></td>
+                <td><strong>Short paragraph</strong></td>
+            </tr>
+            <tr>
+                <td>Yen Huynh</td>
+                <td>041 068 712</td>
+                <td>huyn0115@algonquinlive.com</td>
+                <td style="text-align: left;">
+                    From this course, I hope to learn more about web development and improve my skills in this field. I
+                    am
+                    excited to learn new things like C#, Microsoft Azure, .Net, and apply them to my projects.
+                    I am looking forward to working with my classmates and the professor to create amazing projects.
+                </td>
+        </table>
+    </div>
+
+    <h1>Question list</h1>
+    <div class="question">
+        <table>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <tr>
+                <td>
+                    1. Is C# a strongly or loosely typed language? Why?
+                </td>
+                <td>
+                    Answer:
+                    <p>
+                        C# is a strongly typed language because every variable and object must have a declared type, and
+                        type checking is performed at compile time.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    2. Is C# declarative or imperative? Why?
+                </td>
+                <td>
+                    Answer:
+                    <p>
+                        C# is primarily imperative because it focuses on how to perform tasks, but it also supports
+                        declarative styles like LINQ.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    3. Explain anonymous types in C#, why we use them, and give an example.
+                </td>
+                <td>
+                    Answer:
+                    <p>
+                        Anonymous types let you create objects without defining a class. Useful in LINQ for returning
+                        subsets of properties.
+                    </p>
+                    <p><strong>Ex:</strong> var person = new { Name = "Peter", Age = 20 };</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    4. What is the difference between a Value Type and a Reference type?
+                </td>
+                <td>
+                    Answer:
+                    <p><strong>1. Value Type:</strong> Stores data directly (Ex: int, struct) on the stack.</p>
+                    <p>
+                        <strong>2. Reference Type:</strong> Stores a reference to data (Ex: class, array) on the heap.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    5. What is a 'Property' in C# as it relates to classes and objects?
+                </td>
+                <td>
+                    Answer:
+                    <p>
+                        A property is a class member that provides a flexible mechanisim to read, write, or compute the
+                        value of a private field.
+                    </p>
+                    <p><strong>Ex:</strong> public string Name { get; set; } </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    6. Describe the MVC design pattern. Explain its components.
+                </td>
+                <td>
+                    Answer:
+                    <p><strong>1. Model:</strong> Data and busness logic.</p>
+                    <p><strong>2. View:</strong> User interface.</p>
+                    <p><strong>3. Controller:</strong> Handles input and updates the model and view.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    7. Describe the purpose of the Program.cs class in this project.
+                </td>
+                <td>
+                    Answer:
+                    <p>Program.cs contains the Main method, the entry point of the application.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    8. MVC Core applications can 'host' themselves: true or false.
+                </td>
+                <td>
+                    Answer:
+                    <p>True (They can use the Kestrel web server).</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    9. Explain what happens in memory when we make a value type nullable.
+                </td>
+                <td>
+                    Answer:
+                    <p>A nullable value type can represent its normal range of values plus null, using a HasValue property.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    10. Explain implicit types and why we use them and give an example.
+                </td>
+                <td>
+                    Answer:
+                    <p>Implicit types (var) let the compiler infer the type, making code concise.</p>
+                    <p><strong>Ex:</strong> var number = 10; //integer
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    11. Explain Git flow and why we use it?
+                </td>
+                <td>
+                    Answer:
+                    <p>Git flow is a branching model that organizes work and ensures smooth releases using feature, release, and hotfix branches.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    12. Explain dependency injection and why we use it?
+                </td>
+                <td>
+                    Answer:
+                    <p>Dependency injection provides object that a class depends on, promoting modularity and testability.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
